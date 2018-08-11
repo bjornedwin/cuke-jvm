@@ -1,0 +1,129 @@
+[
+  {
+    "line": 1,
+    "elements": [
+      {
+        "before": [
+          {
+            "result": {
+              "duration": 1928527567,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.openBrowser()"
+            }
+          }
+        ],
+        "line": 3,
+        "name": "Successfull login with valid username and password",
+        "description": "",
+        "id": "this-is-login-feature-for-my-demo-app;successfull-login-with-valid-username-and-password",
+        "after": [
+          {
+            "result": {
+              "duration": 86079011,
+              "status": "passed"
+            },
+            "match": {
+              "location": "Hooks.embedScreenshot(Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 2760602438,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "I\u0027m on the demo website",
+            "match": {
+              "location": "LoginSteps.iMOnTheDemoWebsite()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 834239474,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "I click login",
+            "match": {
+              "location": "LoginSteps.iClickLogin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 128291964,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "I enter my username as bjornedwin@gmail.com",
+            "match": {
+              "arguments": [
+                {
+                  "val": "bjornedwin@gmail.com",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginSteps.iEnterMyUsernameAsBjorn(String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 62999050,
+              "status": "passed"
+            },
+            "line": 7,
+            "name": "I enter my password as pass123",
+            "match": {
+              "arguments": [
+                {
+                  "val": "pass123",
+                  "offset": 23
+                }
+              ],
+              "location": "LoginSteps.iEnterMyPasswordAsPass(String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 948585415,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "I Sign In to my account",
+            "match": {
+              "location": "LoginSteps.iClickSignIn()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 10330686,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "I get directed to my account homepage",
+            "match": {
+              "location": "LoginSteps.iGetDirectedToHomepage()"
+            },
+            "keyword": "Then "
+          }
+        ]
+      }
+    ],
+    "name": "This is login feature for my demo app",
+    "description": "",
+    "id": "this-is-login-feature-for-my-demo-app",
+    "keyword": "Feature",
+    "uri": "src/test/resources/login.feature",
+    "tags": []
+  }
+]
