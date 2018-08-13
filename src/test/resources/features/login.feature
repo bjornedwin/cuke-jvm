@@ -44,6 +44,6 @@ Feature: This is login feature for my demo app
     Then I get a error message <message>
 
     Examples: invalid email and incorrect password
-      | <email>                 | <password>      | <message>                 |
+      | email                   | password        | message                   |
       | bjorn                   | pass123         | Invalid email address.    |
       | bjornedwin@gmail.com    | wrongpass123    | Authentication failed.    |
