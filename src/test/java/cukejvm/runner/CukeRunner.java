@@ -8,7 +8,8 @@ import org.junit.runner.RunWith;
 @CucumberOptions(
         features={"src/test/resources"},
         format = {"pretty","html:test-results/html/cucumber-html-report","json:test-results/json/cucumber.json"},
-        glue = {"cukejvm.stepdef"}
+        glue = {"cukejvm.stepdef"},
+        tags = {"@scenariooutline"}
 )
 
 public class CukeRunner {

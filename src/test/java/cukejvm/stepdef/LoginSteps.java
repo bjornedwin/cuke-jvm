@@ -1,5 +1,6 @@
 package cukejvm.stepdef;
 
+import cucumber.api.PendingException;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
@@ -13,6 +14,7 @@ import org.openqa.selenium.By;
 public class LoginSteps {
 
     WebDriver driver;
+    private static final String DEMO_URL = "http://automationpractice.com/index.php";
 
     public LoginSteps()
     {
@@ -23,7 +25,7 @@ public class LoginSteps {
     public void iMOnTheDemoWebsite() throws Throwable {
         // Write code here that turns the phrase above into concrete actions
         System.out.println("URL launched\n");
-        driver.get("http://automationpractice.com/index.php");
+        driver.get(DEMO_URL);
         assertEquals("My Store", driver.getTitle());
     }
 
@@ -60,5 +62,21 @@ public class LoginSteps {
         assertEquals("My account - My Store", driver.getTitle());
     }
 
+    @Then("^I get a error message ([^\"]*)$")
+    public void iGetAndErrorMessage(String errorMessage) throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        driver.findElement(By.xpath("//*[text()[contains(.,errorMessage)]]"));
+    }
 
+    @And("^I don't enter a password$")
+    public void iDonTEnterAPassword() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        driver.findElement(By.id("passwd")).sendKeys();
+    }
+
+    @And("^I don't enter a username$")
+    public void iDonTEnterAUsername() throws Throwable {
+        // Write code here that turns the phrase above into concrete actions
+        driver.findElement(By.id("email")).sendKeys();
+    }
 }
